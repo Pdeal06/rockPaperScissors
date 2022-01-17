@@ -33,10 +33,11 @@ function playerPlay() {
     let playerChoice = prompt('Rock? Paper? Scissors?');
     let playerChoicefix = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
     
-    if (playerChoicefix === 'Rock' || 'Paper' || 'Scissors'){
+    if (playerChoicefix === 'Rock' || playerChoicefix === 'Paper' || playerChoicefix === 'Scissors'){
         return playerChoicefix
     } else {
-        return 'Not an option'
+        console.log('Not an option')
+        return playerPlay()
     }
 
 
