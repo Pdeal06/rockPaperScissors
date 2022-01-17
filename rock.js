@@ -27,7 +27,24 @@ function computerPlay() {
     else { 
         return 'Scissors'
     }
-
-     
- 
 }
+
+function playerPlay() {
+    let playerChoice = prompt('Rock? Paper? Scissors?');
+    let playerChoicefix = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
+    
+    if (playerChoicefix === 'Rock' || 'Paper' || 'Scissors'){
+        return playerChoicefix
+    } else {
+        return 'Not an option'
+    }
+
+
+
+} 
+
+
+/* My next goal is to write a function that plays a round of RPS. My function will have two parameters
+playerSelection and computerSelection. Plus, it will return a string declaring the winner. At this point, I've
+decided to rearrange the steps some. I'm going to write the prompt for user input first which will allow
+that function to be used here. */
