@@ -51,8 +51,6 @@ decided to rearrange the steps some. I'm going to write the prompt for user inpu
 that function to be used here. Done moving to the game.*/
 
 function playRound(playerSelection, computerSelection) {
-    /*let playerSelection = playerPlay()
-    let computerSelection = computerPlay()*/
 
     /*Create conditional that declares winner
     Compare if playerPlay and computerPlay are equal
@@ -86,6 +84,9 @@ function playRound(playerSelection, computerSelection) {
         return 'You Win! Scissors beat Paper!'
     }
 
+/*Next, I need to create a function that makes this into a best of 5 game. 
+It will need to keep track of rounds won until someone wins 3 rounds
+At that point it will declare a winner. I want to use a loop for this for a challenge*/
         
     
 
