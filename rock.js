@@ -48,4 +48,64 @@ function playerPlay() {
 /* My next goal is to write a function that plays a round of RPS. My function will have two parameters
 playerSelection and computerSelection. Plus, it will return a string declaring the winner. At this point, I've
 decided to rearrange the steps some. I'm going to write the prompt for user input first which will allow
-that function to be used here. */
+that function to be used here. Done moving to the game.*/
+
+function playRound(playerSelection, computerSelection) {
+    /*let playerSelection = playerPlay()
+    let computerSelection = computerPlay()*/
+
+    /*Create conditional that declares winner
+    Compare if playerPlay and computerPlay are equal
+    Return string for tie*/
+    if (playerSelection === computerSelection) {
+        return "It's a Tie!"
+    }
+    //Other option playerPlay rock and computer Paper. return string for player loss//
+    else if (playerSelection === "Rock" && computerSelection === 'Paper') {
+         return "You lose! Paper beats Rock!"
+    }
+    //Other option playerPlay rock computer Scissor. return player win//
+    
+    else if(playerSelection === "Rock" && computerSelection === 'Scissors') {
+        return 'You Win! Rock beats Scissors!'
+    }
+    //Other option player paper computer rock player win//
+    else if(playerSelection === "Paper" && computerSelection === 'Rock') {
+        return 'You Win! Paper beats Rock!'
+    } 
+    //player paper computer scissor player loss//
+    else if(playerSelection === "Paper" && computerSelection === 'Scissors') {
+        return 'You Lose! Scissors beats Rock'
+    }
+    //player scissors computer rock player loss//
+    else if(playerSelection === "Scissors" && computerSelection === 'Rock') {
+        return 'You Lose! Rock beats Scissors!'
+    }
+    //player scissor computer paper player win//
+    else if(playerSelection === "Scissors" && computerSelection === 'Paper') {
+        return 'You Win! Scissors beat Paper!'
+    }
+
+        
+    
+
+
+
+
+
+
+    
+    
+    
+    
+   
+     
+    
+        
+
+    
+
+    
+    
+    
+}
