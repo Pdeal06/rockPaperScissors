@@ -60,7 +60,7 @@ function playRound(playerSelection, computerSelection) {
     }
     //Other option playerPlay rock and computer Paper. return string for player loss//
     else if (playerSelection === "Rock" && computerSelection === 'Paper') {
-         return "You lose! Paper beats Rock!"
+         return "You Lose! Paper beats Rock!"
     }
     //Other option playerPlay rock computer Scissor. return player win//
     
@@ -84,9 +84,13 @@ function playRound(playerSelection, computerSelection) {
         return 'You Win! Scissors beat Paper!'
     }
 
-/*Next, I need to create a function that makes this into a best of 5 game. 
-It will need to keep track of rounds won until someone wins 3 rounds
-At that point it will declare a winner. I want to use a loop for this for a challenge*/
+/*Just gonna write out my thoughts until I have something usable. Game() is supposed to go for 5 rounds
+and keep score. As well as report a winner in the end. I'm having trouble understanding how it will 
+understand a winner. The loop for the playRound seems pretty straightforward. Final thought before sleep. 
+Include score in playRound()*/
+
+
+
         
     
 
