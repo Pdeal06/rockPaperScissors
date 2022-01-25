@@ -50,7 +50,9 @@ playerSelection and computerSelection. Plus, it will return a string declaring t
 decided to rearrange the steps some. I'm going to write the prompt for user input first which will allow
 that function to be used here. Done moving to the game.*/
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection = playerPlay(), computerSelection = computerPlay()) {
+    let playerScore = 0
+    let computerScore = 0
 
     /*Create conditional that declares winner
     Compare if playerPlay and computerPlay are equal
@@ -60,34 +62,46 @@ function playRound(playerSelection, computerSelection) {
     }
     //Other option playerPlay rock and computer Paper. return string for player loss//
     else if (playerSelection === "Rock" && computerSelection === 'Paper') {
+        ++computerScore
          return "You Lose! Paper beats Rock!"
     }
     //Other option playerPlay rock computer Scissor. return player win//
     
     else if(playerSelection === "Rock" && computerSelection === 'Scissors') {
+        ++playerScore
         return 'You Win! Rock beats Scissors!'
     }
     //Other option player paper computer rock player win//
     else if(playerSelection === "Paper" && computerSelection === 'Rock') {
+        ++playerScore
         return 'You Win! Paper beats Rock!'
     } 
     //player paper computer scissor player loss//
     else if(playerSelection === "Paper" && computerSelection === 'Scissors') {
+        ++computerScore
         return 'You Lose! Scissors beats Rock'
     }
     //player scissors computer rock player loss//
     else if(playerSelection === "Scissors" && computerSelection === 'Rock') {
+        ++computerScore
         return 'You Lose! Rock beats Scissors!'
     }
     //player scissor computer paper player win//
     else if(playerSelection === "Scissors" && computerSelection === 'Paper') {
+        ++playerScore
         return 'You Win! Scissors beat Paper!'
     }
+
+    let score = [playerScore, computerScore]
+    return score
+    
 
 /*Just gonna write out my thoughts until I have something usable. Game() is supposed to go for 5 rounds
 and keep score. As well as report a winner in the end. I'm having trouble understanding how it will 
 understand a winner. The loop for the playRound seems pretty straightforward. Final thought before sleep. 
-Include score in playRound()*/
+Include score in playRound() So, what I want will be playRound to return a increase to player score or
+cpu score. I'll make the variables for both initially, have each result option += those variables and then
+the function as a whole will return the variables at the end*/
 
 
 
