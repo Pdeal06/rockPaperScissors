@@ -100,7 +100,7 @@ understand a winner. The loop for the playRound seems pretty straightforward. Fi
 Include score in playRound(). Just made score a global variable and solved most of the issue. I limited 
 myself too much when coming up with a solution */
 
-function game() {
+function playGame() {
     for (let i = 0; i < 5; i++) {
         playRound()
         console.log(`You have ${playerScore}! Your opp has ${computerScore}!`)
